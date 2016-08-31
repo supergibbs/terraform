@@ -40,7 +40,7 @@ plugin-dev: generate
 
 # test runs the unit tests
 test: fmtcheck generate
-	TF_ACC= go test $(TEST) $(TESTARGS) -timeout=30s -parallel=4
+	TF_ACC= go test -v $(TEST) $(TESTARGS) -timeout=30s -parallel=4
 
 # testacc runs acceptance tests
 testacc: fmtcheck generate
